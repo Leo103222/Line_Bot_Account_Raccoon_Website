@@ -369,6 +369,48 @@
 }
 */
 
+/* === Extra Mobile Tweaks (≤480px) === */
+@media (max-width: 480px) {
+  .container { padding: 12px; }
+
+  /* Hero 區塊更矮，避免佔滿畫面 */
+  #hero { padding: 56px 16px; min-height: 60vh; }
+  #hero h1 { font-size: clamp(1.6rem, 7vw, 2.2rem); line-height: 1.25; }
+  #hero h2 { font-size: clamp(0.95rem, 3.8vw, 1.2rem); }
+
+  /* 功能卡片與特色卡片縮小 */
+  .feature-card,
+  .function-item,
+  .choose-card,
+  .join-step-card { padding: 18px; }
+
+  .function-list { 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 14px;
+  }
+  .features-grid,
+  .choose-grid,
+  .join-steps { 
+    grid-template-columns: 1fr; 
+    gap: 16px;
+  }
+
+  .function-item i { font-size: 1.3rem; margin-right: 12px; }
+  .function-item .content h4 { font-size: 1.05rem; }
+  .function-item .content p,
+  .function-item .content .example { font-size: 0.9rem; }
+
+  /* 圖片與 QR 區塊縮小 */
+  #hero .hero-image { max-width: 80vw; }
+  .qr-code-section img { max-width: 140px; }
+  .qr-code-section { padding: 22px; }
+
+  /* Smart Tips 區塊縮小 */
+  .raccoon-smart-tips { padding: 22px !important; }
+  .raccoon-smart-tips h3 { font-size: 1.25rem; }
+  .raccoon-smart-tips ul li { font-size: 0.95rem; margin-bottom: 8px; line-height: 1.6; }
+  .raccoon-smart-tips ul li i { font-size: 1.1rem; margin-right: 8px; margin-top: 4px; }
+}
 </style>
     <link rel="icon" type="image/png" href="image/Accounting-Raccoon-Work.png">
 </head>
@@ -526,7 +568,19 @@
                         <span class="example">範例：「幫助」或「有哪些類別？」</span>
                     </div>
                 </div>
-            </div>
+            
+                <div class="function-item reveal">
+                    <i class="fas fa-folder-plus" style="color:#6a5acd;"></i>
+                    <div class="content">
+                        <h4>自訂類別（新增 / 刪除 / 查看）</h4>
+                        <p>讓你的記帳類別更貼近日常，例如：寵物、健身、學習等。</p>
+                        <span class="example">
+                          範例：「新增類別 寵物」「刪除類別 寵物」「我的類別」
+                        </span>
+                    </div>
+                </div>
+        
+</div>
             
 <div class="smart-tips-wrapper">
 <div class="raccoon-smart-tips reveal" style="box-shadow:0 0 40px rgba(106,90,205,0.5);border:2px solid #6a5acd;padding: 40px;border-radius:20px;">
@@ -620,7 +674,7 @@
     </section>
     <footer style="background-color:#333; color:#fff; text-align:center; padding:20px 0;">
     <div class="container">
-        <p style="margin: 5px 0;"><strong>版本</strong>：v3.1（2025 年 10 月 29 日）– 持續更新中，期待你的反饋！🦝✨</p>
+        <p style="margin: 5px 0;"><strong>版本</strong>：v3.3（2025 年 10 月 30 日）– 持續更新中，期待你的反饋！🦝✨</p>
         <p style="margin: 5px 0;">© 2025 Hanwei. All rights reserved.</p>
         <p style="margin: 10px 0;">
             <a href="https://github.com/Leo103222/Line-bot-Accounting-Raccoon" target="_blank" style="color:#fff; text-decoration:none;">
